@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 st.title('Data employees') # title
 
 # Add url and column name
-DATA_URL = ("../data/employees.csv") # url
+DATA_URL = ("data/employees.csv") # url
 
 # Load data
 @st.cache_data # cache data
