@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 st.title('Data employees') # title
 
 # Add url and column name
-DATA_URL = ("data/employees.csv") # url
+DATA_URL = "data/employees.csv" # url
 
 # Load data
 @st.cache_data # cache data
-def load_data(nrows): # nrows: number of rows
-    data = pd.read_csv(DATA_URL, nrows=nrows) # read data
+def load_data(): # nrows: number of rows
+    data = pd.read_csv(DATA_URL) # read data
     lowercase = lambda x: str(x).lower() # convert to lowercase
     data.rename(lowercase, axis='columns', inplace=True) # rename columns
     return data
@@ -18,7 +18,7 @@ def load_data(nrows): # nrows: number of rows
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...') # text element
 # Load 10,000 rows of data into the dataframe.
-data = load_data(20) # load data
+data = load_data() # load data
 # Notify the reader that the data was successfully loaded.
 data_load_state.text("Done! (using st.cache_data)") # text element
 
