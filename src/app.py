@@ -32,7 +32,7 @@ st.subheader('Salary') # subheader
 # Filter data
 col1, col2, col3 = st.columns(3)
 # En la primera columna, muestra el selector de color
-color = col1.color_picker('Choose a color', '#B07ECA')
+color = col1.color_picker('Choose a color', '#FB4F52')
 # En la segunda columna, muestra el interruptor 'Show names'
 show_names = col2.toggle('Show names', True)
 # En la tercera columna, muestra el interruptor 'Show salaries'
